@@ -16,7 +16,7 @@ public struct Product {
 
     internal init(_ product: SKProduct) {
         self.productIdentifier = product.productIdentifier
-        self.price = product.price.intValue
+        self.price = Int(product.price.doubleValue*100.0)
         self.localizedTitle = product.localizedTitle
         self.priceLocale = product.priceLocale
     }
